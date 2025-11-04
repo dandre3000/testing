@@ -53,8 +53,12 @@
     "tester": "bin/tester.js"
   },
   "scripts": {
+    "install-std": "bunx jsr add @std/assert @std/expect",
     "build": "bun build --entrypoints ./std.ts --outdir ./ --minify-whitespace --minify-syntax",
     "prepack": "bun run build"
+  },
+  "dependencies": {
+    "cross-bdd": "^0.2.0"
   },
   "devDependencies": {
     "@types/deno": "^2.5.0",
@@ -65,8 +69,13 @@
     "@std/expect": "npm:@jsr/std__expect",
     "typescript": "^5.9.3"
   },
-  "dependencies": {
-    "cross-bdd": "^0.2.0"
+  "peerDependenciesMeta": {
+    "@std/assert": {
+      "optional": true
+    },
+    "@std/expect": {
+      "optional": true
+    }
   },
   "type": "module"
 }
