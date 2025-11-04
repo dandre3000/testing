@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/dandre3000/testing.git"
   },
-  "description": "Are you running tests on the same file using node, bun and deno? This collection of runtime agnostic testing utilities provides a consistent, jest-like api. Exports describe, it, expect, an assertion library and an alias for the test runner of the current runtime.",
+  "description": "A collection of runtime agnostic testing utilities with a jest-like api. Exports describe, it, expect, an assertion library and an alias for the test runner of the current runtime.",
   "keywords": [
     "test",
     "jest",
@@ -57,13 +57,13 @@
     "prepack": "bun run build"
   },
   "devDependencies": {
-    "@std/assert": "npm:@jsr/std__assert",
-    "@std/expect": "npm:@jsr/std__expect",
     "@types/deno": "^2.5.0",
     "@types/bun": "latest"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "@std/assert": "npm:@jsr/std__assert",
+    "@std/expect": "npm:@jsr/std__expect",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "cross-bdd": "^0.2.0"
