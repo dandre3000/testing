@@ -1,0 +1,72 @@
+{
+  "name": "@dandre3000/testing",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "DeAundre Payne",
+    "email": "apps.fondling796@passinbox.com",
+    "url": "https://github.com/dandre3000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandre3000/testing.git"
+  },
+  "description": "Are you running tests on the same file using node, bun and deno? This collection of runtime agnostic testing utilities provides a consistent, jest-like api. Exports describe, it, expect, an assertion library and an alias for the test runner of the current runtime.",
+  "keywords": [
+    "test",
+    "jest",
+    "describe",
+    "it",
+    "expect",
+    "assert",
+    "node",
+    "bun",
+    "deno"
+  ],
+  "files": [
+    "./std.js",
+    "./node.js",
+    "./deno.js",
+    "./bun.js",
+    "./testing.d.ts",
+    "./bin"
+  ],
+  "exports": {
+    ".": {
+      "bun": {
+        "types": "./testing.d.ts",
+        "import": "./bun.js"
+      },
+      "deno": {
+        "types": "./testing.d.ts",
+        "import": "./deno.js"
+      },
+      "default": {
+        "types": "./testing.d.ts",
+        "import": "./node.js"
+      }
+    },
+    "./types": "./testing.d.ts",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "tester": "bin/tester.js"
+  },
+  "scripts": {
+    "build": "bun build --entrypoints ./std.ts --outdir ./ --minify-whitespace --minify-syntax",
+    "prepack": "bun run build"
+  },
+  "devDependencies": {
+    "@std/assert": "npm:@jsr/std__assert",
+    "@std/expect": "npm:@jsr/std__expect",
+    "@types/deno": "^2.5.0",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "dependencies": {
+    "cross-bdd": "^0.2.0"
+  },
+  "type": "module"
+}
