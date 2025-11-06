@@ -1,6 +1,6 @@
 {
   "name": "@dandre3000/testing",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "author": {
     "name": "DeAundre Payne",
@@ -52,8 +52,8 @@
     "tester": "bin/tester.js"
   },
   "dependencies": {
-    "@std/assert": "npm:@jsr/std__assert@^1.0.15",
-    "@std/expect": "npm:@jsr/std__expect@^1.0.17",
+    "@std/assert": "npm:@jsr/std__assert",
+    "@std/expect": "npm:@jsr/std__expect",
     "cross-bdd": "^0.2.0"
   },
   "devDependencies": {
