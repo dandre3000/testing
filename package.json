@@ -52,8 +52,8 @@
     "tester": "bin/tester.js"
   },
   "dependencies": {
-    "@std/assert": "npm:@jsr/std__assert^1.0.15",
-    "@std/expect": "npm:@jsr/std__expect^1.0.17",
+    "@std/assert": "npm:@jsr/std__assert@^1.0.15",
+    "@std/expect": "npm:@jsr/std__expect@^1.0.17",
     "cross-bdd": "^0.2.0"
   },
   "devDependencies": {
