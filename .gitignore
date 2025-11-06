@@ -3,4 +3,3 @@ build
 ignore
 package-lock.json
 deno.lock
-std.js

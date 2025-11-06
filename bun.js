@@ -18,6 +18,6 @@ export const test = (name, fn) => {
     return Bun.jest(caller()).test(name, fn)
 }
 
-export * as stdAssert from './std.js'
-export { expect, fn } from './std.js'
+export * as assertLib from '@std/assert'
+export { expect, fn } from '@std/expect'
 export { describe, it } from 'cross-bdd'

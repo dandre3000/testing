@@ -23,7 +23,7 @@ switch (runtime) {
         command = `bun test ${paths.join(' ')}`
         break
     case 'deno':
-        command = `deno test ${paths.join(' ')}`
+        command = `deno test --allow-read ${paths.join(' ')}`
         break
     default:
         console.error(`Unknown runtime: ${runtime}`)
